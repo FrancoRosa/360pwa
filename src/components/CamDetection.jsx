@@ -53,7 +53,7 @@ const Cam = ({ resolution, lines, config, page, setPerson, gps }) => {
     cocossd
       .load({
         base: "lite_mobilenet_v2",
-        modelUrl: "/model.json",
+        modelUrl: "./model.json",
       })
       .then((res) => {
         console.log("... coco loaded");

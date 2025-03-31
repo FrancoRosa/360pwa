@@ -32,6 +32,16 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         maximumFileSizeToCacheInBytes: 8000000, // 8MB
+        runtimeCaching: [
+          {
+            urlPattern: /^\/model\.json$/,
+            handler: "CacheFirst",
+          },
+          {
+            urlPattern: /^group*/,
+            handler: "CacheFirst",
+          },
+        ],
       },
 
       devOptions: {
