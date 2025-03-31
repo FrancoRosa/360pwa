@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+body {
+  @apply font-mono min-h-screen;
+}
