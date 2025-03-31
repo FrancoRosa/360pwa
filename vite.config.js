@@ -23,12 +23,12 @@ export default defineConfig({
       manifest: {
         name: "360pwa",
         short_name: "360pwa",
-        description: "360 awarenes cam",
+        description: "360 awareness cam",
         theme_color: "#ffffff",
       },
 
       workbox: {
-        globPatterns: ["**/*", "**/*.*"],
+        globPatterns: ["**/*.{js,css,html,svg,png,ico,json}", "group*"],
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         maximumFileSizeToCacheInBytes: 8000000, // 8MB
