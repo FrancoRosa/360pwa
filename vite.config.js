@@ -5,6 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 5000, // Increase limit to 5MB
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -28,6 +31,7 @@ export default defineConfig({
         globPatterns: ["**/*.{js,css,html,svg,png,ico}"],
         cleanupOutdatedCaches: true,
         clientsClaim: true,
+        maximumFileSizeToCacheInBytes: 4000000, // 4MB
       },
 
       devOptions: {
