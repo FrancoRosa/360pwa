@@ -99,7 +99,7 @@ const Cam = ({ resolution, lines, config, page, setPerson, gps }) => {
     if (coco) {
       detectInterval = setInterval(() => {
         detect(coco);
-      }, 350);
+      }, 1000);
     } else {
       clearInterval(detectInterval);
     }
